@@ -1,0 +1,1 @@
+22 sprite PNG separati in assets/evolutions/. Ogni file rappresenta una forma/evoluzione leggibile ad occhio umano. Il resto del progetto è lasciato invariato salvo il collegamento dei 22 sprite al renderer/evolution.

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>EvoLand2.io</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="startMenu" class="screenPanel">
+  <div class="menuCard">
+    <h1>EvoLand2.io</h1>
+    <div class="accountBox">
+      <b>Account</b>
+      <span>Livello <b id="accountLevel">1</b></span>
+      <div class="avatarPreview"><img id="homeAvatarImg" src="assets/evolutions/evolution_01_mosca_piccola.png" alt="Avatar evoluzione"><span id="homeAvatarName">Mosca Piccola</span></div>
+      <span>Account XP <b id="accountXp">0</b> / <b id="accountNeed">1600</b></span>
+      <span>Gemme <b id="accountGems">0</b> · Monete <b id="accountGold">0</b></span>
+    </div>
+    <label class="selectLabel">Scegli livello/evoluzione</label>
+    <select id="levelSelect"></select>
+    <div id="levelCost" class="costText"></div>
+    <button id="playBtn" class="bigBtn">PLAY</button>
+    <button id="shopBtn" class="smallBtn">💎 Shop</button>
+    <div class="hint">Modifica mappa, cibo e nemici da <b>engine/game_config.js</b></div>
+  </div>
+</div>
+
+<div id="shopMenu" class="screenPanel hidden">
+  <div class="menuCard shopCard">
+    <h2>Shop</h2>
+    <div class="tabs"><button id="tabGems">Gemme</button><button id="tabArcade">Arcade Shop</button></div>
+    <div id="gemsShop">
+      <input id="bonusCode" placeholder="Bonus code">
+      <button id="redeemCode">Usa codice</button>
+      <div id="shopOffers"></div>
+    </div>
+    <div id="arcadeShop" class="hidden">
+      <p>Dev Console: 25000 monete oppure 1500 gemme.</p><p>Bonus code arcade: attiva Dev Console per 3 giorni.</p>
+      <button id="buyConsoleGold">Compra con monete</button>
+      <button id="buyConsoleGems">Compra con gemme</button>
+      <p id="consoleStatus"></p>
+    </div>
+    <button id="closeShop" class="smallBtn">Chiudi</button>
+  </div>
+</div>
+
+<div id="hud">
+  <div><b id="formName">Pulcino d'Aria</b></div>
+  <div>XP <span id="xp">0</span> / <span id="xpNeed">80</span></div>
+  <div>ALT <span id="alt">0</span> | VY <span id="vy">0</span></div>
+  <div>Lv <span id="hudAccountLevel">1</span> · 💎 <span id="hudGems">0</span> · 🪙 <span id="hudGold">0</span></div>
+  <div>Ossigeno <span id="waterVal">100</span>% · Vita <span id="healthVal">100</span>%</div>
+  <div id="bossHud" class="hidden">Boss <span id="bossHp">0</span>%</div>
+</div>
+<button id="zoomBtn" class="zoomBtn">ZOOM 1x</button>
+<canvas id="miniMap"></canvas>
+<button id="homeBtn" class="topBtn hidden">HOME</button>
+<div id="adminPanel" class="hidden">
+  <button data-xp="500">+500 XP</button>
+  <button data-xp="1000">+1000 XP</button>
+  <button data-xp="2000">+2000 XP</button>
+</div>
+<div id="mobileControls">
+  <div id="movePad">
+    <button id="leftBtn" aria-label="Muovi a sinistra">◀</button>
+    <button id="rightBtn" aria-label="Muovi a destra">▶</button>
+  </div>
+  <div id="actionPad">
+    <button id="flapBtn">FLAP</button>
+    <button id="dashBtn">BOOST x3</button>
+    <button id="fireBtn">FUOCO</button>
+    <button id="scytheBtn" class="hidden">FALCE</button>
+  </div>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>

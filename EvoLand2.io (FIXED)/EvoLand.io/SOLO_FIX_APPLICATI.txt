@@ -1,0 +1,7 @@
+Fix applicati senza rimuovere file:
+- collisioni contatto player/nemici basate sulla dimensione sprite disegnata
+- nemici normali richiedono 2 o 3 tocchi in base al livello
+- sfondo/cielo non viene più ripetuto a tile ogni frame
+- alberi e case riallineati ogni frame al terreno
+- animazione attacco nemici con lo stesso PNG
+- animazione flap player per 1 secondo con inclinazione e battito usando lo stesso PNG
